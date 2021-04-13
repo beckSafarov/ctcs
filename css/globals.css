@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+  --primary-color: #333;
+  --red-color: #f60f20;
+  --blue-color: #26a5fb;
+  --dark-blue: #2098d1;
+  --greyish-color: #e7e6ee;
+  --light-grey: #f9f9f9;
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+* {
+  box-sizing: border-box; /*so the padding does not affect width of anything*/
+}
+
+body,
+html {
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  align-items: center;
+  padding: 15px 100px 50px 100px;
+}
+
+section:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+a.pure-blue {
+  text-decoration: none;
+  color: var(--blue-color);
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section h1 {
+  text-align: center;
+}
+
+/* -- UTILITIES -- */
+
+.hidden {
+  display: none !important;
+}
+
+.center-align {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.centered-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-center {
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pl-25 {
+  padding-left: 25px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-15 {
+  padding-top: 16px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.divider {
+  border: 1px solid gainsboro;
+}
+
+.divider-white {
+  border-color: white;
+}
+
+.block {
+  display: block;
+}
+
+/* -- TOGGLE & NAV MENU */
+
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 26px;
+  padding: 20px;
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.landing-page-title .mobile-logo {
+  display: none;
+}
+
+.toggle:hover {
+  color: var(--blue-color);
+  animation: pulse;
+  animation-duration: 2s;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.navigation ul {
+  position: relative;
+  padding: 1rem;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.navigation ul li a:hover {
+  color: var(--blue-color);
+}
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation .social-bar {
+  position: absolute;
+  padding: 30px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation .social-bar a {
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.navigation .social-bar a:hover {
+  color: var(--blue-color);
+}
+
+/* -- FOOTER -- */
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  background-color: var(--primary-color);
+  padding: 20px 50px 10px 50px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.horizontal-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-social {
+  width: max-content;
+}
+
+.footer-social h4 {
+  text-align: center;
+}
+.footer-social .row {
+  justify-content: center;
+  font-size: 25px;
+  text-align: center;
+}
+
+.footer-social .row a {
+  margin-right: 10px;
+}
+
+.footer-social .row a:hover {
+  color: var(--blue-color);
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: 0.8rem;
+}
+
+/* Some Animation Stuff */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #2098d1;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before,
+.hvr-underline-from-left:focus:before,
+.hvr-underline-from-left:active:before {
+  right: 0;
+}
+
+/* reveal animation */
+.hvr-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-reveal:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-color: #2098d1;
+  border-style: solid;
+  border-width: 0;
+  -webkit-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-reveal:hover:before,
+.hvr-reveal:focus:before,
+.hvr-reveal:active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  border-width: 4px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 500px) {
+  section,
+  footer {
+    padding: 70px 40px;
+  }
+
+  .landing-page-title .mobile-logo {
+    display: block;
+    height: 100px;
+  }
+
+  .logobox {
+    display: none;
+  }
+
+  .toggle {
+    top: 10px;
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .horizontal-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  footer .footer-social h4 {
+    text-align: left;
+  }
+  footer .row {
+    flex-direction: row;
+  }
+}
