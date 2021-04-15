@@ -2,7 +2,7 @@
 <?php 
 $localstyle='main.css';
 $title = 'CTCS official';
-require 'config.php';
+require 'config/config.php';
 require 'inc/header.php'; 
 ?>
   <!-- LANDING PAGE BACKGROUND IMAGE -->
@@ -40,7 +40,9 @@ require 'inc/header.php';
         <h1 data-aos="fade-up" data-aos-duration="3000" >About Us</h1>
         <div class="row">
           <div data-aos="fade-up" data-aos-duration="3000" class="short-about-img">
-            <img src="img/brain.jpg" alt="Brain" />
+              <iframe id="video" width="700" height="500"
+                src="https://www.youtube.com/embed/klXzntaBZ3c">
+              </iframe> 
           </div>
           <div data-aos="fade-up" data-aos-duration="3000" class="textcontent">
             <p>

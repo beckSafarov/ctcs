@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const sizeHandlerIcon = document.querySelector('#expand');
 const publications = document.querySelector('#publications');
 let expandPublications = false;

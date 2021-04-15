@@ -1,7 +1,7 @@
 <?php 
 $localstyle='member.css';
 $title = 'Ahmad Sufril | CTCS';
-require '../config.php'; 
+require '../config/config.php'; 
 require '../inc/header.php'; 
 $data['img'] = 'sufril';
 ?>

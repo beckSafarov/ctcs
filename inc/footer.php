@@ -46,14 +46,18 @@
         </div>
       </div>
       <div class="copyright center-align">
-        Copyright © 2021 CTCS. All rights reserved
+        <p class='copyright-text'>The landing page background <a href="http://www.freepik.com">by starline from freepik</a>. Copyright © 2021 CTCS.</p>
       </div>
     </footer>
     <script>
       const ROOT_URL = '<?php echo URLROOT?>'; 
     </script>
     <script src="<?php echo URLROOT; ?>/js/main.js"></script>
-    <script src="<?php echo URLROOT; ?>/js/member.js"></script>
+    <?php 
+    if($localstyle === 'member.css'){
+      echo '<script src="../js/member.js"></script>'; 
+    }
+    ?>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="<?php echo URLROOT;?>/js/rellax.min.js"></script>
     <script>

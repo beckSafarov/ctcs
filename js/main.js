@@ -7,6 +7,7 @@ const teamMembersLink = document.querySelector('#teamMembersLink');
 const activitiesLink = document.querySelector('#activitiesLink');
 const coursesLink = document.querySelector('#coursesLink');
 const contactLink = document.querySelector('#contactLink');
+const video = document.querySelector('#video');
 let device = 'desktop';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
     device = 'tablet';
   }
 
+  // better iframe size per device
+  if (device === 'tablet') {
+    video.style.width = '600px';
+    video.style.height = '430px';
+  } else if (device === 'mobile') {
+    video.style.width = '300px';
+    video.style.height = '215px';
+  }
+
+  // correcting the nav links for the home page
   if (!location.href.includes('about') && !location.href.includes('members')) {
     homeLink.href = '';
     aboutUsLink.href = '#about';

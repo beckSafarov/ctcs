@@ -1,7 +1,7 @@
 <?php 
 $localstyle='member.css';
 $title = 'Maziani Sabudin | CTCS';
-require '../config.php'; 
+require '../config/config.php'; 
 require '../inc/header.php'; 
 $data['img'] = 'maziani';
 ?>

@@ -1,7 +1,6 @@
 html,
 body {
   height: 100%;
-  background-color: #fff;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -9,9 +8,64 @@ body {
 
 main {
   flex: 1 0 auto;
-  margin-top: 30px;
-  margin-bottom: -50px;
+  margin-top: 70px;
+  margin-bottom: 30px;
   position: relative;
+}
+section {
+  align-items: left;
+}
+
+.about-title {
+  text-align: left;
+}
+
+.author-info {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.author-info .author-photo {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-size: cover;
+  background-image: url('../img/Zarul.jpg');
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.author-info .info {
+  position: relative;
+  /* border: 1px solid grey; */
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  justify-content: center;
+  align-items: left;
+}
+
+.author-info .info a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #009999;
+  font-weight: 500px;
+}
+
+.author-info .info a:hover {
+  text-decoration: underline;
+}
+
+.author-info .info .date {
+  margin-top: 0;
+  font-size: 0.6rem;
+  color: grey;
 }
 
 p:nth-child(1) {
@@ -24,13 +78,9 @@ p:nth-child(1) {
 }
 
 .centered-column img {
-  border-radius: 20px;
-  width: 600px;
-  height: 430px;
-}
-
-.centered-column.bordered img {
-  border: 1px solid gainsboro;
+  border-radius: 10px;
+  width: 700px;
+  height: 500px;
 }
 
 .centered-column p {
@@ -39,10 +89,32 @@ p:nth-child(1) {
   text-align: center;
 }
 
+.centered-column p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.centered-column p a:hover {
+  text-decoration: underline;
+}
+
 /* TABLET RESPONSIVENESS */
 @media (max-width: 1068px) {
   .back-arrow {
     display: none;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .centered-column img {
+    width: inherit;
+    height: 430px;
   }
 }
 
@@ -52,9 +124,12 @@ p:nth-child(1) {
     display: none;
   }
 
+  main {
+    margin-top: 10px;
+  }
+
   h1 {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.5rem;
   }
 
   .centered-column img {
