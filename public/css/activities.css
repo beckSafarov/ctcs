@@ -1,0 +1,210 @@
+main {
+  margin-top: 20px;
+}
+
+section#activities {
+  position: relative;
+  background-color: white;
+  padding: 15px 100px 50px 100px;
+  margin-top: 100px;
+  height: fit-content;
+  font-size: 1rem;
+}
+
+#activities .activity-infoboxes {
+  margin-top: 100px;
+}
+
+#activities .cobot {
+  height: 100vh;
+}
+
+#activities .about-title {
+  margin-bottom: 100px;
+}
+
+.activity-row {
+  display: flex;
+  justify-content: center;
+}
+
+.activity-row .activity-img {
+  flex: 1;
+  /* border: 1px solid #ccc; */
+}
+
+.activity-row .headline-over-image {
+  display: none;
+}
+
+.activity-row img {
+  width: 500px;
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.activity-row img:hover {
+  opacity: 0.7;
+}
+
+.activity-row .activity-body {
+  flex: 1;
+  padding: 0 60px 0 0;
+  height: inherit;
+}
+
+.cobot:nth-child(even) > .activity-row > .activity-body {
+  order: 1;
+}
+
+.cobot:nth-child(even) > .activity-row > .activity-img {
+  order: 2;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 25; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 1068px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .activity-row {
+    flex-direction: column;
+  }
+
+  .cobot:nth-child(even) > .activity-row > .activity-body {
+    order: 2;
+  }
+
+  .cobot:nth-child(even) > .activity-row > .activity-img {
+    order: 1;
+  }
+
+  .activity-row .activity-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .activity-row img {
+    width: 500px;
+    height: 350px;
+  }
+
+  .activity-row .activity-body {
+    padding: 10px 10px 0 10px;
+    text-align: justify;
+  }
+
+  .activity-row .headline-over-body {
+    display: none;
+  }
+
+  .activity-row .headline-over-image {
+    display: block;
+  }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .activity-row {
+    flex-direction: column;
+  }
+
+  .cobot:nth-child(even) > .activity-row > .activity-body {
+    order: 2;
+  }
+
+  .cobot:nth-child(even) > .activity-row > .activity-img {
+    order: 1;
+  }
+
+  .activity-row img {
+    width: 300px;
+    height: 200px;
+  }
+
+  .activity-row .activity-body {
+    padding: 10px 0 0 0;
+    text-align: justify;
+  }
+
+  .activity-row .headline-over-body {
+    display: none;
+  }
+
+  .activity-row .headline-over-image {
+    display: block;
+  }
+}

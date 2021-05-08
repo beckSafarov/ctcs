@@ -1,0 +1,187 @@
+/* -- GENERAL STYLES -- */
+
+header {
+  position: relative;
+}
+
+main {
+  position: relative;
+  margin-top: 100px;
+  height: 130vh;
+}
+
+p,
+ul {
+  font-size: 1rem;
+}
+
+section#member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
+}
+
+/* -- MEMBER CARD -- */
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #ccc;
+  padding-top: 20px;
+  color: #333;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.member h3 {
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* -- MENU TAB -- */
+
+.tab {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.tab button {
+  flex: 1;
+  flex-basis: 200px;
+  font-size: 1rem;
+  border: none;
+  border: 1px solid transparent;
+  background: none;
+}
+
+.tab .active {
+  color: var(--dark-blue);
+  border-bottom: 3px solid var(--dark-blue);
+}
+
+/* -- INFO SECTION DIVS -- */
+
+.info-section {
+  background-color: inherit;
+  padding: 20px 20px 20px 30px;
+}
+
+.info-section i {
+  font-size: 0.5em;
+}
+
+.info-section .label {
+  text-align: right;
+}
+
+.info-section p {
+  padding-left: 30px;
+}
+
+/* -- CONTACT SECTION -- */
+
+.contact-section {
+  padding: 10px 20px 10px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .info-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-section i {
+  font-size: 1em;
+  margin-right: 15px;
+  padding-top: 23px;
+}
+
+.contact-section a {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.zarul {
+  background-image: url('../../img/Zarul.jpg');
+}
+
+.sufril {
+  background-image: url('../img/Sufril.jpg');
+}
+
+.adib {
+  background-image: url('../img/Adib.jpg');
+}
+
+.manmeet {
+  background-image: url('../img/manmeet3.jpg');
+}
+
+.maziani {
+  background-image: url('../img/Maziani.jpg');
+}
+
+.azlan {
+  background-image: url('../img/Azlan.jpg');
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 1068px) {
+  main {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    margin-top: 0;
+    height: max-content;
+  }
+
+  .member {
+    background-color: inherit;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .info-section {
+    padding: 10px;
+  }
+
+  .info-section .label {
+    text-align: left;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

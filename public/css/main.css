@@ -1,0 +1,287 @@
+/* -- 1. LANDING SECTION */
+/* 1.1. Basic layout */
+
+.background-img {
+  background-color: #fff;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+section:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+/* 1.2. Content */
+
+main {
+  flex: 1 0 auto;
+  margin-bottom: -50px;
+  position: relative;
+}
+
+.landing-page-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+  width: 100%;
+}
+
+.landing-page-title h1 {
+  font-size: 50px;
+  word-spacing: 10px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.landing-page-title p {
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.background-img .down-arrow {
+  position: absolute;
+  bottom: 10px;
+}
+
+.background-img .down-arrow a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.background-img .down-arrow a i:hover {
+  animation: pulse;
+  animation-duration: 2s;
+}
+
+/* -- 2. ABOUT SECTION -- */
+section#about {
+  min-height: 100vh;
+  background-color: #fff;
+  padding-top: 30px;
+}
+
+#about h1 {
+  margin-top: 0;
+}
+
+#about button {
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #333;
+  color: #333;
+  cursor: pointer;
+}
+
+/* -- 3. TEAM MEMBERS -- */
+section#team-members {
+  height: 120vh;
+  padding-bottom: 100px;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  background-blend-mode: lighten;
+  background-blend-mode: soft-light, screen;
+}
+
+.cards-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 100px;
+}
+
+.card {
+  margin-right: 30px;
+  position: relative;
+  padding: 15px;
+  border: 3px solid transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 3px solid #2098d1;
+}
+
+.card .card-photo {
+  width: 150px;
+  height: 150px;
+  display: block;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.card:nth-child(1) .card-photo {
+  background-image: url('../img/Zarul.jpg');
+}
+
+.card:nth-child(2) .card-photo {
+  background-image: url('../img/Sufril.jpg');
+}
+
+.card:nth-child(3) .card-photo {
+  background-image: url('../img/Adib.jpg');
+}
+
+.card:nth-child(4) .card-photo {
+  background-image: url('../img/manmeet3.jpg');
+}
+
+.card:nth-child(5) .card-photo {
+  background-image: url('../img/Maziani.jpg');
+}
+
+.card:nth-child(6) .card-photo {
+  background-image: url('../img/Azlan.jpg');
+}
+
+.card .card-description {
+  text-align: center;
+  font-size: 25px;
+}
+
+/* SERVICES SECTION */
+section#services {
+  height: 120vh;
+  background-image: linear-gradient(135deg, #fad7a1 10%, #e96d71 100%);
+}
+
+.serviceCards {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.serviceCards .serviceCard {
+  padding: 30px;
+}
+
+.serviceCards .serviceCard:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.serviceCards .serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.serviceCards .serviceCard .icon img {
+  max-width: 60px;
+}
+
+/* SMALLER SCREEN RESPONSIVENESS */
+@media (max-width: 1250px) {
+  .short-about-img img {
+    width: 600px;
+    height: 430px;
+  }
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 1068px) {
+  .row {
+    flex-direction: column;
+  }
+
+  #about .row .textcontent {
+    margin-left: 0;
+  }
+
+  .short-about-img img {
+    width: 600px;
+    height: 430px;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section#team-members {
+    height: 100%;
+  }
+
+  section#services {
+    height: 100%;
+  }
+
+  .serviceCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serviceCards .serviceCard {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 500px) {
+  .landing-page-title h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+  .landing-page-title p {
+    font-size: 1rem;
+  }
+
+  .background-img .down-arrow {
+    font-size: 10px;
+  }
+
+  /* about section */
+  section#about {
+    height: 100%;
+  }
+
+  #about button {
+    font-size: 0.8rem;
+    padding: 8px 15px 8px 15px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  /* team members section */
+  section#team-members {
+    height: 100%;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* services section */
+  section#services {
+    height: 100%;
+  }
+
+  .serviceCards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .serviceCards .serviceCard {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
