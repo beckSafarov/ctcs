@@ -1,6 +1,6 @@
 <?php 
-$localstyle='main.css';
-$localscript = 'main.js';
+$localstyle='home.css';
+$localscript = 'home.js';
 $title = 'CTCS official';
 require 'config/config.php';
 

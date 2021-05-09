@@ -10,11 +10,6 @@ main {
   height: 130vh;
 }
 
-p,
-ul {
-  font-size: 1rem;
-}
-
 section#member {
   display: flex;
   flex-direction: column;

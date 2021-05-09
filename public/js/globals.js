@@ -1,5 +1,6 @@
 const toggle = document.querySelector('#toggle-icon');
 const navigation = document.querySelector('.navigation');
+const menuItems = document.querySelector('.menu-items-ul');
 const homeLink = document.querySelector('#homeLink');
 const aboutUsLink = document.querySelector('#aboutUsLink');
 const teamMembersLink = document.querySelector('#teamMembersLink');
@@ -26,12 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contactLink.href = 'contact.php';
   }
 
-  // if (
-  //   currentPage.includes('about.php') ||
-  //   currentPage.includes('activities.php')
-  // ) {
-  //   navbar.style.border = 'none';
-  // }
+  console.log(menuItems.children);
 });
 
 toggle.addEventListener('click', (e) => {

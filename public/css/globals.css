@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 :root {
   --primary-color: #333;
+  --gentle-grey: #f2f2f2;
   --red-color: #f60f20;
   --awesome-blue: #00b8e6;
   --blue-color: #26a5fb;
   --dark-blue: steelblue;
   --greyish-color: #e7e6ee;
+  --font-one: 'Merriweather', serif;
+  --font-two: 'Open Sans', sans-serif;
   --services-section: #dea821;
   --alt-grey: #edeaf3;
   --light-grey: #f9f9f9;
@@ -16,13 +22,14 @@
 * {
   box-sizing: border-box; /*so the padding does not affect width of anything*/
 }
-
+/* "apercu", sans-serif */
 body,
 html {
   height: 100vh;
   margin: 0;
   background-color: #fff;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: var(--font-one);
   color: var(--primary-color);
 }
 
@@ -35,8 +42,11 @@ section {
   padding: 15px 100px 50px 100px;
 }
 
-p {
-  font-size: 1.25rem;
+p,
+ul {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-family: var(--font-two);
 }
 
 a.pure-blue {
@@ -168,7 +178,7 @@ section h1 {
 
 .divider {
   width: 100%;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 1px solid var(--gentle-grey);
 }
 
 .divider-white {
@@ -177,6 +187,10 @@ section h1 {
 
 .block {
   display: block;
+}
+
+.unspaced {
+  letter-spacing: 0;
 }
 
 /* -- TOGGLE & NAV MENU */
@@ -192,10 +206,6 @@ section h1 {
   background-repeat: no-repeat;
   z-index: 20;
   cursor: pointer;
-}
-
-.landing-page-title .mobile-logo {
-  display: none;
 }
 
 .toggle:hover {
@@ -268,6 +278,7 @@ navbar {
   z-index: 20;
   height: fit-content;
   background-color: #fff;
+  border: 1px solid var(--gentle-grey);
   font-size: 0.8rem;
   letter-spacing: 2px;
   padding: 5px 20px 0 0;
@@ -289,9 +300,20 @@ navbar .menu-items ul {
 
 navbar a {
   text-decoration: none;
-  padding: 5px 15px 5px 15px;
+  padding: 10px 20px 10px 20px;
   color: var(--primary-color);
   font-size: 0.8rem;
+}
+.hvr-grey-bg {
+  border-radius: 10px;
+}
+
+.hvr-grey-bg:hover {
+  background-color: var(--gentle-grey);
+}
+
+.active-navLink {
+  background-color: var(--gentle-grey);
 }
 
 .logo a img {
@@ -528,15 +550,6 @@ footer a:hover {
   }
 
   navbar {
-    display: none;
-  }
-
-  .landing-page-title .mobile-logo {
-    display: block;
-    height: 100px;
-  }
-
-  .logobox {
     display: none;
   }
 

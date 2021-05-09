@@ -6,9 +6,9 @@ body {
   flex-direction: column;
 }
 
-p {
+/* p {
   font-size: 1rem;
-}
+} */
 
 main {
   flex: 1 0 auto;

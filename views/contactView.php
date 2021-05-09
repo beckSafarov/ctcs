@@ -47,7 +47,8 @@
                <i class="fas fa-map-marker-alt"></i>
                <div class="details">
                   <h4>Address</h4>
-                  <p>School of Computer Sciences, Universiti Sains Malaysia, 11800, Pulau Pinang, Malaysia</p>
+                  <p class="unspaced">School of Computer Sciences, Universiti Sains Malaysia, 11800, Pulau Pinang,
+                     Malaysia</p>
                </div>
             </div>
             <div class="info-box">

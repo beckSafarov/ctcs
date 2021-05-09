@@ -35,8 +35,7 @@
         </div>
      </div>
      <div class="copyright center-align">
-        <p class='copyright-text'>The landing page background <a href="http://www.freepik.com">by starline from
-              freepik</a>. Copyright © 2021 CTCS.</p>
+        <p class='copyright-text'>Copyright © 2021 CTCS.</p>
      </div>
   </footer>
   <script>

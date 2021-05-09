@@ -5,7 +5,7 @@ const captionText = document.getElementById('caption');
 
 const modalImgClicked = (imgName, description = 'Sample Image') => {
   modal.style.display = 'block';
-  modalImg.src = `${ROOT_URL}/img/${imgName}`;
+  modalImg.src = `${ROOT_URL}/public/img/${imgName}`;
   captionText.innerHTML = description;
 };
 

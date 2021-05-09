@@ -1,5 +1,6 @@
 const backgroundImg = document.querySelector('.background-img');
 const video = document.querySelector('#video');
+const homeLinkItem = document.querySelector('#homeLinkItem');
 
 document.addEventListener('DOMContentLoaded', () => {
   // better iframe size per device
@@ -10,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     video.style.width = '300px';
     video.style.height = '215px';
   }
+
+  homeLinkItem.classList.add('hidden');
 });
 
 const memberPage = (memberId) => {

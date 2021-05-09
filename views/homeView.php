@@ -8,15 +8,28 @@
 
 
    <!-- LANDING PAGE CONTENT -->
-   <div id="#landing-page" class="landing-page-title">
+   <div id="#landing-page" class="landing-page">
       <div class="center-align">
          <img class="mobile-logo" src="public/img/logo_simple.png" alt="" />
       </div>
-      <h1 class="animate__animated animate__fadeInDown">
-         Computational Thinking
-      </h1>
-      <p class="animate__animated animate__fadeInLeft">Research Team</p>
+      <div class="intro-text">
+         <h1 class="animate__animated animate__fadeInDown">
+            Computational Thinking
+         </h1>
+         <p class="animate__animated animate__fadeInLeft">Research Team</p>
+      </div>
    </div>
+   <!-- <div class="lp-images">
+      <div class="right-corner">
+         <img src="public/img/lamp.png" alt="">
+      </div>
+      <div class="left-corner">
+         <img src="public/img/analysis.png" alt="">
+      </div>
+      <div class="top-right-corner">
+         <img src="public/img/cog.png" alt="">
+      </div>
+   </div> -->
 
    <div class="center-align">
       <div class="down-arrow">
@@ -37,7 +50,7 @@
          </div>
          <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"
             class="text-center mt-30">
-            <button id='aboutBtn' class='hvr-float-shadow'>Learn more</button>
+            <button id='aboutBtn' class='hvr-float-shadow'>Learn More</button>
          </div>
       </div>
    </section>
