@@ -11,7 +11,8 @@
   --blue-color: #26a5fb;
   --dark-blue: steelblue;
   --greyish-color: #e7e6ee;
-  --font-one: 'Merriweather', serif;
+  /* --font-one: 'Merriweather', serif; */
+  --font-one: 'Poppins', sans-serif;
   --font-two: 'Open Sans', sans-serif;
   --services-section: #dea821;
   --alt-grey: #edeaf3;
@@ -22,7 +23,7 @@
 * {
   box-sizing: border-box; /*so the padding does not affect width of anything*/
 }
-/* "apercu", sans-serif */
+
 body,
 html {
   height: 100vh;

@@ -22,67 +22,66 @@ main {
   position: relative;
 }
 
-.landing-page {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  padding: 0px;
-  width: 100%;
-}
-
-.landing-page h1 {
-  font-size: 4rem;
-  word-spacing: 10px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-}
-
-.landing-page p {
-  font-size: 25px;
-  letter-spacing: 3px;
-}
-
 .mobile-logo {
   display: none;
 }
 
-.background-img .down-arrow {
-  position: absolute;
-  bottom: 10px;
+.landing-page {
+  display: flex;
+  height: 100%;
+  padding: 100px 50px 100px 50px;
+  /* border: 1px solid #ccc; */
 }
 
-.background-img .down-arrow a {
-  text-decoration: none;
-  color: var(--primary-color);
+.landing-page .body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  /* border: 1px solid red; */
 }
 
-.background-img .down-arrow a i:hover {
-  animation: pulse;
-  animation-duration: 2s;
+.landing-page .body h1 {
+  font-size: 3.5rem;
+  word-spacing: 7px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
-/* -- 2. ABOUT SECTION -- */
-section#about {
-  min-height: 100vh;
-  background-color: #fff;
-  padding-top: 30px;
+.landing-page .body p {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
 }
 
-#about h1 {
-  margin-top: 0;
-}
-
-#about button {
-  font-size: 1rem;
+.landing-page button {
+  font-size: 1.2rem;
+  margin-top: 20px;
   font-family: var(--font-two);
   background: var(--primary-color);
   color: var(--gentle-grey);
   padding: 10px 20px 10px 20px;
-  border: 1px solid #333;
-  border-radius: 10px;
+  border: none;
   cursor: pointer;
+}
+
+.landing-page .body,
+.landing-page .video {
+  /* border: 1px solid red; */
+  height: 100%;
+}
+
+.landing-page .video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.landing-page .video iframe {
+  width: 100%;
+  height: 70%;
 }
 
 /* -- 3. TEAM MEMBERS -- */
@@ -194,10 +193,6 @@ section#services {
 
 /* SMALLER SCREEN RESPONSIVENESS */
 @media (max-width: 1250px) {
-  .short-about-img img {
-    width: 600px;
-    height: 430px;
-  }
   .row {
     flex-direction: column;
     justify-content: center;
@@ -212,13 +207,62 @@ section#services {
     flex-direction: column;
   }
 
-  #about .row .textcontent {
-    margin-left: 0;
+  /* landing page */
+  .landing-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .landing-page h1 {
-    font-size: 2.5rem;
+  .landing-page .body {
+    flex: 2;
+  }
+
+  .landing-page .btn-div {
+    padding-top: 20px;
+  }
+
+  .landing-page .body,
+  .landing-page .video {
+    width: 100%;
+  }
+
+  .landing-page .video {
+    flex: 3;
+    align-items: flex-start;
+  }
+
+  .landing-page .video iframe {
+    height: 90%;
+    width: 100%;
+  }
+
+  .landing-page .body .text {
+    text-align: center;
+  }
+
+  .landing-page .body .text h1 {
+    font-size: 2rem;
     letter-spacing: 3px;
+  }
+
+  .landing-page .body .text p {
+    font-size: 1rem;
+    color: grey;
+  }
+
+  .landing-page .btn-div {
+    text-align: center;
+  }
+
+  .landing-page .btn-div button {
+    margin-top: 0;
+    font-size: 0.8rem;
+    border-radius: 0;
+  }
+
+  #about .row .textcontent {
+    margin-left: 0;
   }
 
   .cards-container {
@@ -243,21 +287,60 @@ section#services {
 
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 500px) {
-  .landing-page h1 {
-    font-size: 2rem;
-    letter-spacing: 3px;
-  }
-  .landing-page p {
-    font-size: 1rem;
-  }
-
-  .landing-page .mobile-logo {
+  .mobile-logo {
     display: block;
-    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
   }
 
-  .background-img .down-arrow {
-    font-size: 10px;
+  .mobile-logo img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .landing-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+
+  .landing-page .body {
+    flex: 1;
+  }
+
+  .landing-page .body .text h1 {
+    font-size: 1.5rem;
+  }
+
+  .landing-page .body .text p {
+    font-size: 0.8rem;
+  }
+
+  .landing-page .body .btn-div {
+    padding-top: 10px;
+  }
+
+  /* .landing-page .body .btn-div button {
+    border-radius: 20px;
+  } */
+
+  .landing-page .body,
+  .landing-page .video {
+    width: 100%;
+  }
+
+  .landing-page .video {
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  .landing-page .video iframe {
+    height: 80%;
+    width: 100%;
   }
 
   /* about section */

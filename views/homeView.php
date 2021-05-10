@@ -8,75 +8,48 @@
 
 
    <!-- LANDING PAGE CONTENT -->
-   <div id="#landing-page" class="landing-page">
-      <div class="center-align">
-         <img class="mobile-logo" src="public/img/logo_simple.png" alt="" />
-      </div>
-      <div class="intro-text">
-         <h1 class="animate__animated animate__fadeInDown">
-            Computational Thinking
-         </h1>
-         <p class="animate__animated animate__fadeInLeft">Research Team</p>
-      </div>
+   <div class="mobile-logo">
+      <img src="<?php echo URLROOT;?>/public/img/logo_main.png" alt="CT USM">
    </div>
-   <!-- <div class="lp-images">
-      <div class="right-corner">
-         <img src="public/img/lamp.png" alt="">
-      </div>
-      <div class="left-corner">
-         <img src="public/img/analysis.png" alt="">
-      </div>
-      <div class="top-right-corner">
-         <img src="public/img/cog.png" alt="">
-      </div>
-   </div> -->
-
-   <div class="center-align">
-      <div class="down-arrow">
-         <a href="#about"><i class="fas fa-chevron-down fa-3x"></i></a>
-      </div>
-   </div>
-</div>
-<!-- the end of the background image -->
-
-<main>
-   <!-- ABOUT SECTION -->
-   <section id="about">
-      <h1 data-aos="fade-up" data-aos-duration="2000">About Us</h1>
-      <div class="centered-column">
-         <div data-aos="fade-up" data-aos-duration="2000" class="short-about-video">
-            <iframe id="video" width="700" height="500" src="https://www.youtube.com/embed/klXzntaBZ3c">
-            </iframe>
+   <div id="landing-page" class="landing-page">
+      <div class="body">
+         <div class="text">
+            <h1 class="animate__animated animate__fadeInDown">Computational Thinking</h1>
+            <p class="animate__animated animate__fadeInLeft">Lorem ipsum dolor sit amet consectetur adipisicing</p>
          </div>
-         <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="500" data-aos-offset="0"
-            class="text-center mt-30">
+         <div class='btn-div animate__animated animate__fadeInUp'>
             <button id='aboutBtn' class='hvr-float-shadow'>Learn More</button>
          </div>
       </div>
-   </section>
+      <div class="video animate__animated animate__zoomIn">
+         <iframe id="video" src="https://www.youtube.com/embed/klXzntaBZ3c">
+         </iframe>
+      </div>
+   </div>
 
-   <!-- TEAM MEMBERS SECTION -->
-   <section id="team-members">
-      <h1 data-aos="fade-in" data-aos-duration="2000">Team Members</h1>
-      <div class="cards-container">
-         <?php 
+   <main>
+      <!-- TEAM MEMBERS SECTION -->
+      <section id="team-members">
+         <h1 data-aos="fade-in" data-aos-duration="2000">Team Members</h1>
+         <div class="cards-container">
+            <?php 
               for($i=0; $i<6; $i++){
                 require 'components/memberCard.php'; 
               }
            ?>
-      </div>
-   </section>
+         </div>
+      </section>
 
-   <!-- SERVICES SECTION -->
-   <section id="services">
-      <h1 data-aos="fade-in" data-aos-duration="2000">Our Services</h1>
-      <div class="serviceCards">
-         <?php 
+      <!-- SERVICES SECTION -->
+      <section id="services">
+         <h1 data-aos="fade-in" data-aos-duration="2000">Our Services</h1>
+         <div class="serviceCards">
+            <?php 
                 for($i=0; $i<6; $i++){
                   require 'components/serviceCard.php';
                 }
               ?>
-      </div>
-   </section>
-</main>
-<?php require 'components/footer.php'; ?>
+         </div>
+      </section>
+   </main>
+   <?php require 'components/footer.php'; ?>
