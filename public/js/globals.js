@@ -1,14 +1,16 @@
 const toggle = document.querySelector('#toggle-icon');
 const navigation = document.querySelector('.navigation');
 const menuItems = document.querySelector('.menu-items-ul');
+const toggleNavItems = document.querySelector('.toggleNavItems');
 const homeLink = document.querySelector('#homeLink');
-const teamMembersLink = document.querySelector('#teamMembersLink');
 const activitiesLink = document.querySelector('#activitiesLink');
 const contactLink = document.querySelector('#contactLink');
 const navbar = document.querySelector('#navbar');
 const currentPage = location.href;
+const navMenuItems = menuItems.children;
 let device = 'desktop';
 let prevScrollpos = window.pageYOffset;
+let menuLinkNames = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   if (screen.availWidth <= 500) {
@@ -18,13 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // correcting the nav links for the home page
-  if (!currentPage.includes('about.php') && !currentPage.includes('members/')) {
-    homeLink.href = '';
-    teamMembersLink.href = '#team-members';
-    contactLink.href = 'contact.php';
-  }
+  // if (!currentPage.includes('about.php') && !currentPage.includes('members/')) {
+  //   homeLink.href = '';
+  // }
 
-  console.log(menuItems.children);
+  for (let child of Object.keys(navMenuItems)) {
+    let childElement = navMenuItems[child];
+    let linkName = childElement.children[0].name;
+    if (linkName !== '' && currentPage.includes(linkName)) {
+      childElement.children[0].classList.add('active-navLink');
+    }
+  }
 });
 
 toggle.addEventListener('click', (e) => {

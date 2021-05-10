@@ -18,7 +18,8 @@
 
    <!-- The Modal -->
    <div id="modal" class="modal">
-      <img class="modal-content" id="modalImage">
+      <img class="modal-content" id="modalImage" alt="Activity Image">
+      <br>
       <div id="caption"></div>
    </div>
 

@@ -4,7 +4,7 @@
    <?php require 'components/navbar.php'; ?>
    <?php require 'components/toggleNav.php'; ?>
 </header>
-<?php require 'components/header.php'; ?>
+
 <main>
    <section>
       <div class="about">

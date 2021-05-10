@@ -18,5 +18,4 @@
   define('MAZIANI_PATH', URLROOT.'/members.php?member=5'); 
   define('AZLAN_PATH', URLROOT.'/members.php?member=6'); 
 
-
  

@@ -3,11 +3,14 @@
 </div>
 
 <div class="navigation">
-   <ul>
-      <li><a id='homeLink' onclick="closeToggleMenu()" href="<?php echo HOME_PATH;?>">Home</a></li>
-      <li><a id='aboutUsLink' onclick="closeToggleMenu()" href="<?php echo ABOUT_PATH;?>">About</a></li>
-      <li><a id='activitiesLink' onclick="closeToggleMenu()" href="<?php echo ACTIVITIES_PATH;?>">Activities</a></li>
-      <li><a id='contactLink' onclick="closeToggleMenu()" href="<?php echo CONTACT_PATH;?>">Contact</a></li>
+   <ul class='toggleNavItems'>
+      <li><a name="home" id='homeLink' onclick="closeToggleMenu()" href="<?php echo HOME_PATH;?>">Home</a></li>
+      <li><a class="active-toggle-link" name="about" id='aboutUsLink' onclick="closeToggleMenu()"
+            href="<?php echo ABOUT_PATH;?>">About</a></li>
+      <li><a name="activities" id='activitiesLink' onclick="closeToggleMenu()"
+            href="<?php echo ACTIVITIES_PATH;?>">Activities</a></li>
+      <li><a name="contact" id='contactLink' onclick="closeToggleMenu()" href="<?php echo CONTACT_PATH;?>">Contact</a>
+      </li>
    </ul>
 
    <div class="social-bar">
