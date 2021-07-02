@@ -57,7 +57,7 @@ main {
 .landing-page button {
   font-size: 1.2rem;
   margin-top: 20px;
-  font-family: var(--font-two);
+  font-family: var(--font-one);
   background: var(--primary-color);
   color: var(--gentle-grey);
   padding: 10px 20px 10px 20px;
@@ -69,24 +69,25 @@ main {
 .landing-page .video {
   /* border: 1px solid red; */
   height: 100%;
+  /* border: 1px solid #ccc; */
 }
 
 .landing-page .video {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   /* border: 1px solid red; */
 }
 
 .landing-page .video iframe {
   width: 100%;
-  height: 70%;
+  height: 80%;
 }
 
 /* -- 3. TEAM MEMBERS -- */
 section#team-members {
-  height: 120vh;
+  height: 100vh;
   padding-bottom: 100px;
   /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
   background-color: #f2f2f2;
@@ -104,7 +105,7 @@ section#team-members {
 .card {
   margin-right: 30px;
   position: relative;
-  padding: 15px;
+  padding: 15px 10px 15px 10px;
   border: 3px solid transparent;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 36px;
@@ -120,8 +121,8 @@ section#team-members {
 }
 
 .card .card-photo {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   display: block;
   background-size: cover;
   border-radius: 50%;
@@ -131,26 +132,44 @@ section#team-members {
 
 .card:nth-child(1) .card-photo {
   background-image: url('../img/Zarul.jpg');
+  background-size: 190px;
+  background-position-x: -35px;
+  background-position-y: -30px;
 }
 
 .card:nth-child(2) .card-photo {
   background-image: url('../img/Sufril.jpg');
+  background-size: 240px;
+  background-position-x: -75px;
+  background-position-y: -10px;
 }
 
 .card:nth-child(3) .card-photo {
   background-image: url('../img/Adib.jpg');
+  background-size: 240px;
+  background-position-x: -60px;
+  background-position-y: -55px;
 }
 
 .card:nth-child(4) .card-photo {
   background-image: url('../img/manmeet3.jpg');
+  background-size: 300px;
+  background-position-x: -75px;
+  background-position-y: -115px;
 }
 
 .card:nth-child(5) .card-photo {
   background-image: url('../img/Maziani.jpg');
+  background-size: 230px;
+  background-position-x: -40px;
+  background-position-y: -20px;
 }
 
 .card:nth-child(6) .card-photo {
   background-image: url('../img/Azlan.jpg');
+  background-size: 220px;
+  background-position-x: -45px;
+  background-position-y: -25px;
 }
 
 .card .card-description {
@@ -305,7 +324,8 @@ section#services {
     align-items: center;
     height: 100%;
     width: 100%;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    padding: 100px 20px 50px 20px;
   }
 
   .landing-page .body {
@@ -323,10 +343,6 @@ section#services {
   .landing-page .body .btn-div {
     padding-top: 10px;
   }
-
-  /* .landing-page .body .btn-div button {
-    border-radius: 20px;
-  } */
 
   .landing-page .body,
   .landing-page .video {
@@ -377,5 +393,18 @@ section#services {
 
   .serviceCards .serviceCard {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* extra small mobile screens */
+@media (max-width: 350px) {
+  .landing-page .video {
+    flex: 1;
+    align-items: flex-end;
+  }
+
+  .landing-page .video iframe {
+    height: 80%;
+    width: 100%;
   }
 }

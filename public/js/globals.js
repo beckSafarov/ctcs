@@ -6,6 +6,7 @@ const homeLink = document.querySelector('#homeLink');
 const activitiesLink = document.querySelector('#activitiesLink');
 const contactLink = document.querySelector('#contactLink');
 const navbar = document.querySelector('#navbar');
+const logoImg = document.querySelector('#logo_img');
 const currentPage = location.href;
 const navMenuItems = menuItems.children;
 let device = 'desktop';
@@ -19,15 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     device = 'tablet';
   }
 
-  // correcting the nav links for the home page
-  // if (!currentPage.includes('about.php') && !currentPage.includes('members/')) {
-  //   homeLink.href = '';
-  // }
-
   for (let child of Object.keys(navMenuItems)) {
     let childElement = navMenuItems[child];
     let linkName = childElement.children[0].name;
-    if (linkName !== '' && currentPage.includes(linkName)) {
+    if (linkName && currentPage.includes(linkName)) {
       childElement.children[0].classList.add('active-navLink');
     }
   }
@@ -46,11 +42,10 @@ toggle.addEventListener('click', (e) => {
 
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById('navbar').style.top = '0';
-  } else {
-    document.getElementById('navbar').style.top = '-100px';
-  }
+
+  document.getElementById('navbar').style.top =
+    prevScrollpos > currentScrollPos ? '0' : '-100px';
+
   prevScrollpos = currentScrollPos;
 };
 

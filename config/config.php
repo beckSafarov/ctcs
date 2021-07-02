@@ -1,7 +1,7 @@
 <?php
   // identifying the root url
   $host = $_SERVER['HTTP_HOST'];
-  $rootUrl = ($host === 'localhost:8080') ? 'http://localhost:8080/ctcs' : "http://$host";
+  $rootUrl = ($host === 'localhost:8080') ? "http://$host/ctcs" : "http://$host";
   define('URLROOT', $rootUrl);
 
   // -- LINKS -- 

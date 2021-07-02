@@ -10,6 +10,10 @@ section#activities {
   font-size: 1rem;
 }
 
+#activities p {
+  font-weight: 300px;
+}
+
 #activities .activity-infoboxes {
   margin-top: 100px;
 }
@@ -63,6 +67,9 @@ section#activities {
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed; /* Stay in place */
   z-index: 25; /* Sit on top */
   padding-top: 100px; /* Location of the box */
@@ -92,8 +99,9 @@ section#activities {
   max-width: 700px;
   text-align: center;
   color: #ccc;
+  font-size: 1.2rem;
+  font-weight: 400;
   padding: 10px 0;
-  height: 150px;
 }
 
 /* Add Animation */
@@ -112,27 +120,9 @@ section#activities {
   }
 }
 
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 1068px) {
-  .modal-content {
+  .modal .modal-content {
     width: 90%;
   }
 
@@ -174,7 +164,7 @@ section#activities {
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
-  .modal-content {
+  .modal .modal-content {
     width: 90%;
   }
 

@@ -4,7 +4,7 @@ const modalImg = document.getElementById('modalImage');
 const captionText = document.getElementById('caption');
 
 const modalImgClicked = (imgName, description = 'Sample Image') => {
-  modal.style.display = 'block';
+  modal.style.display = 'flex';
   modalImg.src = `${ROOT_URL}/public/img/${imgName}`;
   captionText.innerHTML = description;
 };

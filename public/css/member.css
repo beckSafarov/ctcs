@@ -39,8 +39,8 @@ section#member {
 }
 
 .member-photo {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-size: cover;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -50,6 +50,48 @@ section#member {
 .member h3 {
   padding-top: 10px;
   text-align: center;
+}
+
+.zarul {
+  background-image: url('../img/Zarul.jpg');
+  background-size: 190px;
+  background-position-x: -35px;
+  background-position-y: -30px;
+}
+
+.sufril {
+  background-image: url('../img/Sufril.jpg');
+  background-size: 240px;
+  background-position-x: -75px;
+  background-position-y: -10px;
+}
+
+.adib {
+  background-image: url('../img/Adib.jpg');
+  background-size: 240px;
+  background-position-x: -60px;
+  background-position-y: -55px;
+}
+
+.manmeet {
+  background-image: url('../img/manmeet3.jpg');
+  background-size: 300px;
+  background-position-x: -75px;
+  background-position-y: -115px;
+}
+
+.maziani {
+  background-image: url('../img/Maziani.jpg');
+  background-size: 230px;
+  background-position-x: -40px;
+  background-position-y: -20px;
+}
+
+.azlan {
+  background-image: url('../img/Azlan.jpg');
+  background-size: 220px;
+  background-position-x: -45px;
+  background-position-y: -25px;
 }
 
 /* -- MENU TAB -- */
@@ -122,30 +164,6 @@ section#member {
 
 .contact-section a:hover {
   text-decoration: underline;
-}
-
-.zarul {
-  background-image: url('../../img/Zarul.jpg');
-}
-
-.sufril {
-  background-image: url('../img/Sufril.jpg');
-}
-
-.adib {
-  background-image: url('../img/Adib.jpg');
-}
-
-.manmeet {
-  background-image: url('../img/manmeet3.jpg');
-}
-
-.maziani {
-  background-image: url('../img/Maziani.jpg');
-}
-
-.azlan {
-  background-image: url('../img/Azlan.jpg');
 }
 
 /* TABLET RESPONSIVENESS */
